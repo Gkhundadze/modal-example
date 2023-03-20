@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    border: 0;
+}
+:root {
+    --modal-bg: rgba(80, 29, 29, .8);
+    --modal-footer-bg: #333;
+}
+html, body {
+    font-size: 100%;
+}
+.container {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+.button {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: var(--modal-bg);
+    color: white;
+    font-size: 2rem;
+}
+/* modal config */
+.modal-wrapper {
+    position: fixed;
+    inset: 0;
+    background-color: var(--modal-bg);
+    display: none;
+    place-items: center;
+}
+
+.modal-window {
+    position: relative;
+    width: 60vw;
+    height: 70vh;
+    background-color: #fff;
+    padding: 2rem;
+}
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: .5s;
+    border-radius: 50%;
+}
+.close-button:hover {
+    transform: scale(1.2);
+}
+.modal-header {
+    text-align: center;
+}
+.modal-content {
+    max-height: 80%;
+    height: 60%;
+    padding: 1rem 0;
+}
+
+.modal-footer {
+    background-color: var(--modal-footer-bg);
+    color: white;
+    padding: 1rem;
+}
+
+
+.modal-wrapper.active {
+    display: grid;
+}
+
+/* modal config */
