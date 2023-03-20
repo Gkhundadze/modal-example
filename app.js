@@ -5,8 +5,20 @@ const openBtn = document.querySelector('.open')
 
 
 openBtn.addEventListener('click', () => {
-    modal.classList.toggle('active')
+    triggerModal(modal)
 })
 closeBtn.addEventListener('click', () => {
-    modal.classList.toggle('active')
+    triggerModal(modal)
 })
+
+
+window.addEventListener('click', (e) => {
+    if(e.target == document.querySelector('.modal-wrapper')) {
+        triggerModal(modal)
+    }
+})
+
+
+function triggerModal (modal) {
+    modal.classList.toggle('active')
+}
